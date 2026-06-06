@@ -1,0 +1,773 @@
+/* ============================================ */
+/* FORM.CSS - CODA SHOP PREMIUM STYLE          */
+/* Dark Gradient Background + Card Premium     */
+/* Production Ready - No Framework             */
+/* ============================================ */
+
+/* ============================================ */
+/* GLOBAL RESET & BASE                         */
+/* ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(ellipse at 30% 40%, #0f0c29, #1a1a3e, #0a0a1a);
+    min-height: 100vh;
+    padding: 40px 20px;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(124, 58, 237, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #7c3aed, #c084fc);
+    border-radius: 10px;
+}
+
+/* ============================================ */
+/* MAIN CONTAINER                              */
+/* ============================================ */
+.form-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* ============================================ */
+/* PREMIUM CARD (WHITE ROUNDED LARGE)          */
+/* ============================================ */
+.premium-card {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 48px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(124, 58, 237, 0.2);
+    backdrop-filter: blur(2px);
+}
+
+/* Card Header */
+.card-header {
+    background: linear-gradient(135deg, #ffffff, #f8f9ff);
+    padding: 32px 40px;
+    border-bottom: 1px solid rgba(124, 58, 237, 0.15);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.game-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.game-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #7c3aed, #c084fc);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+}
+
+.game-details h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 4px;
+}
+
+.game-details .game-publisher {
+    font-size: 13px;
+    color: #7c3aed;
+    font-weight: 500;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #7c3aed;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 18px;
+    background: rgba(124, 58, 237, 0.1);
+    border-radius: 40px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background: rgba(124, 58, 237, 0.2);
+    transform: translateX(-4px);
+}
+
+/* Step Indicator */
+.steps-indicator {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #888;
+    font-weight: 500;
+}
+
+.step .step-number {
+    width: 32px;
+    height: 32px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.step.active .step-number {
+    background: linear-gradient(135deg, #7c3aed, #c084fc);
+    color: white;
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.6);
+}
+
+.step.active {
+    color: #7c3aed;
+}
+
+.step.completed .step-number {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+
+.step.completed {
+    color: #10b981;
+}
+
+/* ============================================ */
+/* CARD BODY                                   */
+/* ============================================ */
+.card-body {
+    padding: 40px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title i {
+    color: #7c3aed;
+}
+
+/* ID Input Section */
+.id-input-section {
+    margin-bottom: 35px;
+}
+
+.id-input-wrapper {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.id-input-wrapper input {
+    flex: 1;
+    padding: 16px 20px;
+    border: 2px solid #e5e7eb;
+    border-radius: 20px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    background: #f9fafb;
+}
+
+.id-input-wrapper input:focus {
+    outline: none;
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+}
+
+.check-id-btn {
+    padding: 16px 28px;
+    background: linear-gradient(135deg, #7c3aed, #c084fc);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.check-id-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+}
+
+.check-id-btn:active {
+    transform: scale(0.98);
+}
+
+/* ============================================ */
+/* NOMINAL CARDS GRID                          */
+/* ============================================ */
+.nominal-section {
+    margin-bottom: 40px;
+}
+
+.nominal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.nominal-card {
+    background: #f8f9fc;
+    border-radius: 20px;
+    padding: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    text-align: center;
+}
+
+.nominal-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(124, 58, 237, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nominal-card.selected {
+    border-color: #7c3aed;
+    background: linear-gradient(135deg, #f3e8ff, #faf5ff);
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+}
+
+.best-seller-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nominal-amount {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+}
+
+.nominal-price {
+    font-size: 22px;
+    font-weight: 800;
+    color: #7c3aed;
+    margin-bottom: 8px;
+}
+
+.nominal-original {
+    font-size: 12px;
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+.nominal-discount {
+    font-size: 11px;
+    color: #10b981;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/* ============================================ */
+/* SERVER SELECTION (jika ada)                 */
+/* ============================================ */
+.server-section {
+    margin-bottom: 35px;
+}
+
+.server-select {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #e5e7eb;
+    border-radius: 20px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background: #f9fafb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.server-select:focus {
+    outline: none;
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+}
+
+/* ============================================ */
+/* PAYMENT METHODS (SELECTABLE CARDS)          */
+/* ============================================ */
+.payment-section {
+    margin-bottom: 35px;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 14px;
+}
+
+.payment-card {
+    background: #f8f9fc;
+    border-radius: 18px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.payment-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(124, 58, 237, 0.3);
+}
+
+.payment-card.selected {
+    border-color: #7c3aed;
+    background: linear-gradient(135deg, #f3e8ff, #faf5ff);
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.3);
+}
+
+.payment-icon {
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.payment-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 2px;
+}
+
+.payment-info span {
+    font-size: 11px;
+    color: #888;
+}
+
+/* ============================================ */
+/* ORDER SUMMARY                               */
+/* ============================================ */
+.summary-section {
+    background: linear-gradient(135deg, #f8f9fc, #f0f2f5);
+    border-radius: 24px;
+    padding: 24px;
+    margin-bottom: 30px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.summary-row.total {
+    border-bottom: none;
+    padding-top: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #7c3aed;
+}
+
+.summary-label {
+    color: #666;
+}
+
+.summary-value {
+    font-weight: 600;
+    color: #1a1a2e;
+}
+
+/* ============================================ */
+/* SUBMIT BUTTON (NEON GRADIENT)               */
+/* ============================================ */
+.submit-section {
+    text-align: center;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #7c3aed, #c084fc, #a855f7);
+    border: none;
+    border-radius: 60px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-submit:hover::before {
+    left: 100%;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.5);
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+/* ============================================ */
+/* FOOTER INFO                                 */
+/* ============================================ */
+.footer-info {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-info span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-info i {
+    color: #7c3aed;
+}
+
+/* ============================================ */
+/* TOAST NOTIFICATION                          */
+/* ============================================ */
+.toast-notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #1a1e45, #0f1235);
+    backdrop-filter: blur(12px);
+    padding: 14px 24px;
+    border-radius: 50px;
+    border-left: 4px solid #10b981;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+.toast-notification.show {
+    transform: translateX(0);
+}
+
+.toast-notification.error {
+    border-left-color: #ef4444;
+}
+
+/* ============================================ */
+/* RESPONSIVE (MOBILE FIRST)                   */
+/* ============================================ */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 12px;
+    }
+    
+    .premium-card {
+        border-radius: 32px;
+    }
+    
+    .card-header {
+        padding: 24px 20px;
+    }
+    
+    .card-body {
+        padding: 24px 20px;
+    }
+    
+    .game-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+    
+    .game-details h1 {
+        font-size: 18px;
+    }
+    
+    .steps-indicator {
+        gap: 15px;
+    }
+    
+    .step {
+        font-size: 12px;
+    }
+    
+    .step .step-number {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+    
+    .nominal-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 12px;
+    }
+    
+    .nominal-card {
+        padding: 14px;
+    }
+    
+    .nominal-amount {
+        font-size: 14px;
+    }
+    
+    .nominal-price {
+        font-size: 18px;
+    }
+    
+    .payment-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+    
+    .payment-card {
+        padding: 12px;
+    }
+    
+    .payment-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .payment-info h4 {
+        font-size: 12px;
+    }
+    
+    .btn-submit {
+        padding: 14px;
+        font-size: 16px;
+    }
+    
+    .footer-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .toast-notification {
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        transform: translateY(120%);
+        text-align: center;
+    }
+    
+    .toast-notification.show {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .nominal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .payment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .id-input-wrapper {
+        flex-direction: column;
+    }
+    
+    .check-id-btn {
+        width: 100%;
+    }
+}
+
+/* ============================================ */
+/* ANIMATIONS                                  */
+/* ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.premium-card {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(124, 58, 237, 0);
+    }
+}
+
+.btn-submit:focus {
+    animation: pulse 0.5s ease;
+}
+
+/* Click Animation Global */
+.click-animation {
+    animation: clickPop 0.2s ease;
+}
+
+@keyframes clickPop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.96);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Hover Glow Effect for Cards */
+.nominal-card:hover,
+.payment-card:hover {
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
+}
+
+/* Loading State */
+.btn-submit.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.btn-submit.loading::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-top-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ============================================ */
+/* PRINT STYLES                                */
+/* ============================================ */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    
+    .premium-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .btn-submit,
+    .back-link,
+    .check-id-btn,
+    .toast-notification {
+        display: none;
+    }
+}

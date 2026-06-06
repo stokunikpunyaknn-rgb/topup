@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>LevelUp Store | Top Up Game - Form Pembayaran</title>
+    <meta name="description" content="Top up game favorit Anda dengan mudah, cepat, dan aman. Isi formulir pembayaran untuk menyelesaikan transaksi.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <!-- Main Premium Card -->
+        <div class="premium-card">
+            
+            <!-- ============================================ -->
+            <!-- BANNER GAME (Header Premium)                 -->
+            <!-- ============================================ -->
+            <div class="card-header">
+                <div class="header-top">
+                    <div class="game-info">
+                        <div class="game-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="game-details">
+                            <h1>Mobile Legends: Bang Bang</h1>
+                            <span class="game-publisher">Moonton • Top Up Diamond</span>
+                        </div>
+                    </div>
+                    <a href="#" class="back-link">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Kembali ke Beranda</span>
+                    </a>
+                </div>
+                
+                <!-- Badge Pembayaran Aman -->
+                <div class="secure-badges">
+                    <span class="badge">
+                        <i class="fas fa-shield-alt"></i> Pembayaran 100% Aman
+                    </span>
+                    <span class="badge">
+                        <i class="fas fa-bolt"></i> Proses Instan
+                    </span>
+                    <span class="badge">
+                        <i class="fas fa-headset"></i> Support 24/7
+                    </span>
+                </div>
+                
+                <!-- Step Indicator -->
+                <div class="steps-indicator">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <span>User ID</span>
+                    </div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <span>Pilih Nominal</span>
+                    </div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <span>Metode Bayar</span>
+                    </div>
+                    <div class="step" data-step="4">
+                        <div class="step-number">4</div>
+                        <span>Selesai</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ============================================ -->
+            <!-- CARD BODY - FORM UTAMA                       -->
+            <!-- ============================================ -->
+            <div class="card-body">
+                
+                <!-- STEP 1: MASUKKAN USER ID -->
+                <section class="form-section" id="step1Section">
+                    <div class="section-title">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Step 1: Masukkan User ID</span>
+                    </div>
+                    
+                    <div class="id-input-section">
+                        <div class="id-input-wrapper">
+                            <input type="text" 
+                                   id="userId" 
+                                   placeholder="Contoh: 12345678 (User ID Game Anda)" 
+                                   autocomplete="off">
+                            <button type="button" class="check-id-btn" id="checkIdBtn">
+                                <i class="fas fa-search"></i> Cek User ID
+                            </button>
+                        </div>
+                        <div class="id-info" id="userIdInfo">
+                            <small><i class="fas fa-info-circle"></i> Masukkan User ID Mobile Legends Anda dengan benar</small>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- STEP 2: PILIH NOMINAL -->
+                <section class="form-section" id="step2Section">
+                    <div class="section-title">
+                        <i class="fas fa-tags"></i>
+                        <span>Step 2: Pilih Nominal Top Up</span>
+                    </div>
+                    
+                    <div class="nominal-section">
+                        <div class="nominal-grid" id="nominalGrid">
+                            <!-- Nominal Card 1 -->
+                            <div class="nominal-card" data-amount="27900" data-diamond="50">
+                                <div class="best-seller-badge">Best Seller</div>
+                                <div class="nominal-amount">50 Diamond</div>
+                                <div class="nominal-price">Rp 27.900</div>
+                                <div class="nominal-original">Rp 35.000</div>
+                                <div class="nominal-discount">-20% OFF</div>
+                            </div>
+                            
+                            <!-- Nominal Card 2 -->
+                            <div class="nominal-card" data-amount="54900" data-diamond="120">
+                                <div class="nominal-amount">120 Diamond</div>
+                                <div class="nominal-price">Rp 54.900</div>
+                                <div class="nominal-original">Rp 70.000</div>
+                                <div class="nominal-discount">-22% OFF</div>
+                            </div>
+                            
+                            <!-- Nominal Card 3 -->
+                            <div class="nominal-card" data-amount="79900" data-diamond="200">
+                                <div class="nominal-amount">200 Diamond</div>
+                                <div class="nominal-price">Rp 79.900</div>
+                                <div class="nominal-original">Rp 100.000</div>
+                                <div class="nominal-discount">-20% OFF</div>
+                            </div>
+                            
+                            <!-- Nominal Card 4 -->
+                            <div class="nominal-card" data-amount="159900" data-diamond="400">
+                                <div class="nominal-amount">400 Diamond</div>
+                                <div class="nominal-price">Rp 159.900</div>
+                                <div class="nominal-original">Rp 200.000</div>
+                                <div class="nominal-discount">-20% OFF</div>
+                            </div>
+                            
+                            <!-- Nominal Card 5 -->
+                            <div class="nominal-card" data-amount="279900" data-diamond="800">
+                                <div class="nominal-amount">800 Diamond</div>
+                                <div class="nominal-price">Rp 279.900</div>
+                                <div class="nominal-original">Rp 350.000</div>
+                                <div class="nominal-discount">-20% OFF</div>
+                            </div>
+                            
+                            <!-- Nominal Card 6 -->
+                            <div class="nominal-card" data-amount="549900" data-diamond="1750">
+                                <div class="nominal-amount">1.750 Diamond</div>
+                                <div class="nominal-price">Rp 549.900</div>
+                                <div class="nominal-original">Rp 700.000</div>
+                                <div class="nominal-discount">-21% OFF</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- STEP 3: METODE PEMBAYARAN -->
+                <section class="form-section" id="step3Section">
+                    <div class="section-title">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Step 3: Pilih Metode Pembayaran</span>
+                    </div>
+                    
+                    <div class="payment-section">
+                        <div class="payment-grid" id="paymentGrid">
+                            <!-- Payment Card 1 - QRIS -->
+                            <div class="payment-card" data-method="qris" data-name="QRIS">
+                                <div class="payment-icon">
+                                    <i class="fas fa-qrcode"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <h4>QRIS</h4>
+                                    <span>Scan & Bayar</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Payment Card 2 - GoPay -->
+                            <div class="payment-card" data-method="gopay" data-name="GoPay">
+                                <div class="payment-icon">
+                                    <i class="fas fa-wallet"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <h4>GoPay</h4>
+                                    <span>Dompet Digital</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Payment Card 3 - OVO -->
+                            <div class="payment-card" data-method="ovo" data-name="OVO">
+                                <div class="payment-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <h4>OVO</h4>
+                                    <span>Dompet Digital</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Payment Card 4 - DANA -->
+                            <div class="payment-card" data-method="dana" data-name="DANA">
+                                <div class="payment-icon">
+                                    <i class="fas fa-coins"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <h4>DANA</h4>
+                                    <span>Dompet Digital</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Payment Card 5 - Transfer Bank BCA -->
+                            <div class="payment-card" data-method="bca" data-name="BCA">
+                                <div class="payment-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <h4>BCA Transfer</h4>
+                                    <span>Rekening Bank</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Payment Card 6 - Transfer Bank Mandiri -->
+                            <div class="payment-card" data-method="mandiri" data-name="Mandiri">
+                                <div class="payment-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <h4>Mandiri Transfer</h4>
+                                    <span>Rekening Bank</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Payment Card 7 - Indomaret -->
+                            <div class="payment-card" data-method="indomaret" data-name="Indomaret">
+                                <div class="payment-icon">
+                                    <i class="fas fa-store"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <h4>Indomaret</h4>
+                                    <span>Convenience Store</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Payment Card 8 - Alfamart -->
+                            <div class="payment-card" data-method="alfamart" data-name="Alfamart">
+                                <div class="payment-icon">
+                                    <i class="fas fa-store"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <h4>Alfamart</h4>
+                                    <span>Convenience Store</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- SERVER SELECTION (Opsional untuk game tertentu) -->
+                <section class="form-section" id="serverSection">
+                    <div class="section-title">
+                        <i class="fas fa-server"></i>
+                        <span>Pilih Server (Opsional)</span>
+                    </div>
+                    
+                    <div class="server-section">
+                        <select class="server-select" id="serverSelect">
+                            <option value="">-- Pilih Server --</option>
+                            <option value="4001">Server 4001 (Indonesia)</option>
+                            <option value="4002">Server 4002 (Indonesia - Bali)</option>
+                            <option value="4003">Server 4003 (Indonesia - Jawa)</option>
+                            <option value="4004">Server 4004 (Indonesia - Sumatera)</option>
+                            <option value="5001">Server 5001 (Singapore)</option>
+                            <option value="5002">Server 5002 (Malaysia)</option>
+                        </select>
+                    </div>
+                </section>
+                
+                <!-- RINGKASAN PESANAN -->
+                <section class="summary-section">
+                    <div class="section-title">
+                        <i class="fas fa-receipt"></i>
+                        <span>Ringkasan Pesanan</span>
+                    </div>
+                    
+                    <div class="summary-content">
+                        <div class="summary-row">
+                            <span class="summary-label">Game</span>
+                            <span class="summary-value" id="summaryGame">Mobile Legends: Bang Bang</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">User ID</span>
+                            <span class="summary-value" id="summaryUserId">-</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Server</span>
+                            <span class="summary-value" id="summaryServer">-</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Nominal Top Up</span>
+                            <span class="summary-value" id="summaryNominal">-</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Metode Pembayaran</span>
+                            <span class="summary-value" id="summaryPayment">-</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span class="summary-label">Total Tagihan</span>
+                            <span class="summary-value" id="summaryTotal">Rp 0</span>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- TOMBOL BELI SEKARANG -->
+                <div class="submit-section">
+                    <button type="button" class="btn-submit" id="submitBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Beli Sekarang
+                    </button>
+                </div>
+                
+                <!-- FOOTER INFO -->
+                <div class="footer-info">
+                    <span><i class="fas fa-lock"></i> Transaksi Aman & Terenkripsi</span>
+                    <span><i class="fas fa-clock"></i> Proses Instan 1-5 Menit</span>
+                    <span><i class="fas fa-headset"></i> Customer Support 24/7</span>
+                </div>
+                
+            </div>
+            <!-- END CARD BODY -->
+        </div>
+        <!-- END PREMIUM CARD -->
+    </div>
+    
+    <!-- ============================================ -->
+    <!-- TOAST CONTAINER (untuk notifikasi)          -->
+    <!-- ============================================ -->
+    <div id="toastContainer" class="toast-container"></div>
+    
+    <!-- External JavaScript -->
+    <script src="form.js"></script>
+</body>
+</html>

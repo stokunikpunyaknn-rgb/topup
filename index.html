@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>BgParno Store | Top Up Game & Voucher Termurah 24 Jam</title>
+    <meta name="description" content="BgParnoStore - Situs top up game & voucher terlengkap se-Indonesia. 100+ game, pulsa semua operator, aman 100%, proses 24 jam.">
+    <meta name="keywords" content="top up game, bgprnostore, topup murah, beli diamond, pulsa, data, voucher game">
+    <meta name="author" content="BgParno Store">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.bgprnostore.id/">
+    <meta property="og:title" content="BgParnoStore | Top Up Game & Voucher Termurah">
+    <meta property="og:description" content="100+ game, pulsa semua operator, proses instan 24 jam">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0a0e27;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        body.light {
+            background: #f0f2f5;
+            color: #1a1a2e;
+        }
+
+        body.light .game-card,
+        body.light .invoice-card,
+        body.light .footer,
+        body.light .modal-content,
+        body.light .cart-sidebar {
+            background: #ffffff;
+            color: #1a1a2e;
+        }
+
+        body.light .game-card h4,
+        body.light .game-card .game-category {
+            color: #1a1a2e;
+        }
+
+        body.light .search-box input,
+        body.light .invoice-form input,
+        body.light .modal-content input {
+            background: #f5f5f5;
+            color: #333;
+            border-color: #ddd;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #0f1235, #0a0e27);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(124,58,237,0.3);
+        }
+
+        body.light .header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .logo a {
+            font-size: 28px;
+            font-weight: 800;
+            text-decoration: none;
+            color: white;
+        }
+
+        body.light .logo a {
+            color: #0a0e27;
+        }
+
+        .logo a span {
+            color: #7c3aed;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .currency-selector {
+            background: rgba(124,58,237,0.2);
+            padding: 8px 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .theme-toggle {
+            background: rgba(124,58,237,0.2);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            color: white;
+            font-size: 14px;
+        }
+
+        body.light .theme-toggle {
+            color: #0a0e27;
+        }
+
+        .mobile-menu-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+        }
+
+        body.light .mobile-menu-btn {
+            color: #0a0e27;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        body.light .nav-menu a {
+            color: #4a4a6a;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #7c3aed;
+        }
+
+        .btn-login-nav, .btn-register-nav {
+            padding: 8px 20px;
+            border-radius: 30px;
+        }
+
+        .btn-register-nav {
+            background: linear-gradient(135deg, #7c3aed, #c084fc);
+            color: white !important;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            .navbar {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 80px);
+                background: #0f1235;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 30px;
+                transition: 0.3s;
+                z-index: 999;
+            }
+            body.light .navbar {
+                background: #ffffff;
+                box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            }
+            .navbar.active {
+                left: 0;
+            }
+            .nav-menu {
+                flex-direction: column;
+                width: 100%;
+                gap: 20px;
+            }
+        }
+
+        /* Hero */
+        .hero {
+            padding: 40px 0 30px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #7c3aed, #c084fc);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 38px;
+            }
+        }
+
+        .highlight {
+            color: #7c3aed;
+        }
+
+        .popular-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 25px 0 30px;
+        }
+
+        .tag {
+            background: rgba(124,58,237,0.15);
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+            border: 1px solid rgba(124,58,237,0.3);
+        }
+
+        .tag:hover {
+            background: rgba(124,58,237,0.3);
+            transform: translateY(-2px);
+        }
+
+        .category-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 15px;
+        }
+
+        .cat-btn {
+            background: none;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 30px;
+            color: rgba(255,255,255,0.7);
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        body.light .cat-btn {
+            color: #666;
+        }
+
+        .cat-btn.active {
+            background: linear-gradient(135deg, #7c3aed, #c084fc);
+            color: white;
+        }
+
+        /* Invoice Card */
+        .invoice-card {
+            background: linear-gradient(135deg, #1a1e45, #0f1235);
+            border-radius: 24px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid rgba(124,58,237,0.3);
+        }
+
+        body.light .invoice-card {
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .invoice-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .invoice-form input {
+            flex: 1;
+            padding: 14px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(124,58,237,0.3);
+            background: rgba(10,14,39,0.8);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-invoice {
+            background: linear-gradient(135deg, #7c3aed, #c084fc);
+            border: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Games Grid */
+        .games-section {
+            padding: 40px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-header h2 {
+            font-size: 28px;
+        }
+
+        .search-filter {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            flex: 1;
+            display: flex;
+            max-width: 400px;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 12px 18px;
+            border-radius: 50px 0 0 50px;
+            border: 1px solid rgba(124,58,237,0.3);
+            background: rgba(10,14,39,0.8);
+            color: white;
+        }
+
+        .search-box button {
+            padding: 12px 20px;
+            border-radius: 0 50px 50px 0;
+            background: linear-gradient(135deg, #7c3aed, #c084fc);
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: rgba(124,58,237,0.2);
+            border: none;
+            padding: 8px 18px;
+            border-radius: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        body.light .filter-btn {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .filter-btn.active {
+            background: #7c3aed;
+            color: white;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .game-card {
+            background: linear-gradient(135deg, #1a1e45, #0f1235);
+            border-radius: 20px;
+            padding: 20px 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+            border: 1px solid rgba(124,58,237,0.2);
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            border-color: #7c3aed;
+            box-shadow: 0 10px 25px rgba(124,58,237,0.3);
+        }
+
+        .game-card.featured {
+            border: 2px solid #7c3aed;
+        }
+
+        .game-icon img {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            object-fit: cover;
+        }
+
+        .game-card h4 {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .game-category {
+            font-size: 11px;
+            color: rgba(255,255,255,0.5);
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .hot-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #ef4444;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .btn-topup {
+            background: linear-gradient(135deg, #7c3aed, #c084fc);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            color: white;
+            font-weight: 600;
+            font-size: 12px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* Cart Sidebar */
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 380px;
+            height: 100vh;
+            background: #0f1235;
+            z-index: 2000;
+            transition: 0.3s;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: -5px 0 30px rgba(0,0,0,0.5);
+        }
+
+        .cart-sidebar.open {
+            right: 0;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .close-cart {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .cart-items {
+            max-height: 55vh;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .cart-total {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #7c3aed, #c084fc);
+            border: none;
+            border-radius: 40px;
+            color: white;
+            font-weight: 700;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #ef4444;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+
+        .modal.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: #1a1e45;
+            border-radius: 24px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .amount-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .amount-btn {
+            background: rgba(124,58,237,0.2);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .amount-btn.selected {
+            background: #7c3aed;
+        }
+
+        /* Transactions Table */
+        .transactions {
+            padding: 40px 0;
+        }
+
+        .transactions-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .leaderboard-tabs {
+            display: flex;
+            gap: 10px;
+        }
+
+        .leaderboard-tab {
+            background: none;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            color: rgba(255,255,255,0.7);
+            cursor: pointer;
+        }
+
+        .leaderboard-tab.active {
+            background: #7c3aed;
+            color: white;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        .transactions-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .transactions-table th,
+        .transactions-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .status {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .status.success { background: #10b981; color: white; }
+        .status.process { background: #f59e0b; color: white; }
+
+        /* Empty State */
+        .empty-transactions {
+            text-align: center;
+            padding: 40px;
+            background: rgba(124,58,237,0.1);
+            border-radius: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0a0e27;
+            padding: 50px 0 20px;
+            margin-top: 50px;
+            border-top: 1px solid rgba(124,58,237,0.2);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo span {
+            color: #7c3aed;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo"><a href="/">bgprnostore<span>.id</span></a></div>
+                <div class="header-actions">
+                    <div class="currency-selector">ID / IDR <i class="fas fa-chevron-down"></i></div>
+                    <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i> Mode</button>
+                    <div class="cart-icon" id="cartIcon"><i class="fas fa-shopping-cart" style="font-size: 22px;"></i><span class="cart-count" id="cartCount">0</span></div>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+            <nav class="navbar" id="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Beranda</a></li>
+                    <li><a href="#games" class="nav-link">Topup</a></li>
+                    <li><a href="#transactions" class="nav-link">Cek Transaksi</a></li>
+                    <li><a href="#leaderboard" class="nav-link">Leaderboard</a></li>
+                    <li><a href="#" class="nav-link btn-login-nav" id="loginBtnNav">Masuk</a></li>
+                    <li><a href="#" class="nav-link btn-register-nav" id="registerBtnNav">Daftar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-badge">TERLENGKAP SE-INDONESIA!</div>
+                <h1 class="hero-title">Top Up Game & Pulsa <span class="highlight">Termurah, Terlengkap, Aman 100%</span> buka 24 Jam dengan payment terlengkap.</h1>
+                <div class="popular-tags" id="popularTags">
+                    <div class="tag" data-game="Mobile Legends">Mobile Legends <small>Moonton</small></div>
+                    <div class="tag" data-game="Free Fire">Free Fire <small>Garena</small></div>
+                    <div class="tag" data-game="Valorant">Valorant <small>Riot</small></div>
+                    <div class="tag" data-game="PUBG Mobile">PUBG <small>Tencent</small></div>
+                    <div class="tag" data-game="Genshin Impact">Genshin <small>HoYoverse</small></div>
+                    <div class="tag" data-game="Telkomsel">Pulsa Telkomsel</div>
+                    <div class="tag" data-game="XL">Pulsa XL</div>
+                    <div class="tag" data-game="Indosat">Pulsa Indosat</div>
+                </div>
+                <div class="category-tabs">
+                    <button class="cat-btn active" data-cat="all">Semua Game</button>
+                    <button class="cat-btn" data-cat="game">Top Up Game</button>
+                    <button class="cat-btn" data-cat="pulsa">Pulsa & Data</button>
+                    <button class="cat-btn" data-cat="voucher">Voucher</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="invoice-check">
+            <div class="container">
+                <div class="invoice-card">
+                    <h3><i class="fas fa-file-invoice"></i> Cek Invoice Kamu</h3>
+                    <p>Lihat detail pembelian kamu menggunakan nomor Invoice.</p>
+                    <div class="invoice-form">
+                        <input type="text" id="invoiceInput" placeholder="Masukkan nomor Invoice (WSXXXXXXXXXXXXX)">
+                        <button class="btn-invoice" id="searchInvoiceBtn">Cari Invoice <i class="fas fa-search"></i></button>
+                    </div>
+                    <div id="invoiceResult" style="margin-top: 15px; display: none;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="games" class="games-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Daftar Game & Pulsa <span class="highlight">Terlengkap</span></h2>
+                    <p>100+ game + pulsa semua operator + voucher</p>
+                </div>
+                <div class="search-filter">
+                    <div class="search-box"><input type="text" id="searchGame" placeholder="Cari game/pulsa..."><button id="searchBtn"><i class="fas fa-search"></i></button></div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Semua</button>
+                        <button class="filter-btn" data-filter="game">Game</button>
+                        <button class="filter-btn" data-filter="pulsa">Pulsa/Data</button>
+                        <button class="filter-btn" data-filter="voucher">Voucher</button>
+                    </div>
+                </div>
+                <div class="games-grid" id="gamesGrid"></div>
+                <div class="show-more"><button class="btn-show-more" id="showMoreBtn">Tampilkan Lainnya... <i class="fas fa-arrow-down"></i></button></div>
+            </div>
+        </section>
+
+        <section id="transactions" class="transactions">
+            <div class="container">
+                <div class="transactions-header">
+                    <h2><i class="fas fa-chart-line"></i> Transaksi Terakhir</h2>
+                    <div class="leaderboard-tabs">
+                        <button class="leaderboard-tab active" data-period="all">Semua Transaksi</button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="transactions-table">
+                        <thead><tr><th>Tanggal</th><th>Nomor Invoice</th><th>Produk</th><th>ID/No.Tujuan</th><th>Harga</th><th>Status</th></tr></thead>
+                        <tbody id="transactionsBody"></tbody>
+                    </table>
+                    <div id="emptyTransactionMsg" class="empty-transactions" style="display: none;">
+                        <i class="fas fa-receipt" style="font-size: 48px; opacity: 0.5;"></i>
+                        <p style="margin-top: 15px;">Belum ada transaksi. Yuk top up sekarang!</p>
+                        <button onclick="document.getElementById('games').scrollIntoView({behavior:'smooth'})" style="margin-top: 15px; background:#7c3aed; border:none; padding:10px 20px; border-radius:30px; color:white; cursor:pointer;">Mulai Top Up →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="leaderboard" class="transactions">
+            <div class="container">
+                <div class="transactions-header">
+                    <h2><i class="fas fa-trophy"></i> Leaderboard Pembelian Terbanyak</h2>
+                </div>
+                <div class="table-responsive">
+                    <table class="transactions-table">
+                        <thead><tr><th>Rank</th><th>Username</th><th>Total Transaksi</th><th>Total Nominal</th></tr></thead>
+                        <tbody id="leaderboardBody"></tbody>
+                    </table>
+                    <div id="emptyLeaderboardMsg" class="empty-transactions" style="display: none;">
+                        <i class="fas fa-chart-simple" style="font-size: 48px; opacity: 0.5;"></i>
+                        <p>Belum ada data leaderboard. Jadilah yang pertama!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header"><h3>Keranjang Belanja</h3><button class="close-cart" id="closeCartBtn"><i class="fas fa-times"></i></button></div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total" id="cartTotal">Total: Rp 0</div>
+        <button class="checkout-btn" id="checkoutBtn">Checkout Sekarang</button>
+    </div>
+
+    <!-- Modal Topup -->
+    <div class="modal" id="topupModal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 id="modalGameTitle">Top Up</h3><button class="close-modal" id="closeModalBtn"><i class="fas fa-times"></i></button></div>
+            <div class="modal-body">
+                <p>ID/No.Tujuan: <input type="text" id="userId" placeholder="Masukkan ID/No.HP" style="width:100%; padding:10px; margin:10px 0; border-radius:10px;"></p>
+                <p>Pilih Nominal:</p>
+                <div class="amount-options" id="amountOptions"></div>
+                <button class="btn-topup" id="addToCartBtn" style="width:100%; padding:14px;">Tambah ke Keranjang</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Login & Register -->
+    <div class="modal" id="loginModal"><div class="modal-content"><div class="modal-header"><h3>Masuk</h3><button class="close-modal" id="closeLoginModal"><i class="fas fa-times"></i></button></div><div class="modal-body"><input type="text" placeholder="Username" style="width:100%; padding:12px; margin:10px 0;"><input type="password" placeholder="Password" style="width:100%; padding:12px; margin:10px 0;"><button class="btn-topup" style="width:100%;">Masuk</button><p style="text-align:center; margin-top:15px;">Belum punya akun? <a href="#" id="switchToRegister" style="color:#7c3aed;">Daftar</a></p></div></div></div>
+    <div class="modal" id="registerModal"><div class="modal-content"><div class="modal-header"><h3>Daftar</h3><button class="close-modal" id="closeRegisterModal"><i class="fas fa-times"></i></button></div><div class="modal-body"><input type="text" placeholder="Username" style="width:100%; padding:12px; margin:10px 0;"><input type="email" placeholder="Email" style="width:100%; padding:12px; margin:10px 0;"><input type="password" placeholder="Password" style="width:100%; padding:12px; margin:10px 0;"><button class="btn-topup" style="width:100%;">Daftar</button><p style="text-align:center; margin-top:15px;">Sudah punya akun? <a href="#" id="switchToLogin" style="color:#7c3aed;">Masuk</a></p></div></div></div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col"><div class="footer-logo">bgparnostore<span>.id</span></div><p>Situs top up game & voucher terlengkap se-Indonesia. 100+ game, pulsa semua operator, aman 100%, proses 24 jam.</p></div>
+                <div class="footer-col"><h4>Peta Situs</h4><ul><li><a href="#">Beranda</a></li><li><a href="#">Topup Game</a></li><li><a href="#">Pulsa & Data</a></li><li><a href="#">Voucher</a></li></ul></div>
+                <div class="footer-col"><h4>Bantuan</h4><ul><li><a href="#">Hubungi Kami</a></li><li><a href="#">FAQ</a></li><li><a href="#">Metode Pembayaran</a></li></ul></div>
+                <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Kebijakan Privasi</a></li><li><a href="#">Syarat & Ketentuan</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>© 2026 BGPARNOSTORE.ID. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script>
+        // ============================================
+        // DATA GAME LENGKAP (DARI SEMUA SCREENSHOT)
+        // ============================================
+        const gamesData = [
+            // Game dari screenshot 247274
+            { id: 1, name: "Arena Breakout", category: "game", subcat: "fps", icon: "AB", price: 64900, amounts: [22900, 44900, 64900, 129900] },
+            { id: 2, name: "Blood Strike", category: "game", subcat: "fps", icon: "BS", price: 54900, amounts: [19900, 39900, 54900, 109900] },
+            { id: 3, name: "Clash of Clans", category: "game", subcat: "rpg", icon: "CoC", price: 59900, amounts: [19900, 39900, 59900, 119900] },
+            { id: 4, name: "Cloud Song", category: "game", subcat: "rpg", icon: "CS", price: 69900, amounts: [24900, 49900, 69900, 139900] },
+            { id: 5, name: "Brawl Stars", category: "game", subcat: "mo", icon: "BS", price: 54900, amounts: [17900, 34900, 54900, 109900] },
+            { id: 6, name: "Hav Day", category: "game", subcat: "casual", icon: "HD", price: 39900, amounts: [14900, 29900, 39900, 79900] },
+            { id: 7, name: "Tace Racer", category: "game", subcat: "racing", icon: "TR", price: 49900, amounts: [16900, 33900, 49900, 99900] },
+            { id: 8, name: "Valorant", category: "game", subcat: "fps", icon: "VAL", price: 89900, amounts: [29900, 59900, 89900, 179900] },
+            { id: 9, name: "Call of Duty Mobile", category: "game", subcat: "fps", icon: "CODM", price: 74900, amounts: [24900, 49900, 74900, 149900] },
+            { id: 10, name: "Arena of Valor", category: "game", subcat: "mo", icon: "AOV", price: 69900, amounts: [26900, 52900, 69900, 139900] },
+            { id: 11, name: "Entropy", category: "game", subcat: "rpg", icon: "ENT", price: 59900, amounts: [19900, 39900, 59900, 119900] },
+            { id: 12, name: "Tuner", category: "game", subcat: "racing", icon: "TUN", price: 44900, amounts: [14900, 29900, 44900, 89900] },
+            { id: 13, name: "Sealman", category: "game", subcat: "action", icon: "SLM", price: 39900, amounts: [12900, 25900, 39900, 79900] },
+            // Game dari screenshot 247276
+            { id: 14, name: "Ensemble Stars Music", category: "game", subcat: "rhythm", icon: "ESM", price: 49900, amounts: [16900, 33900, 49900, 99900] },
+            { id: 15, name: "Ragnarok Origin", category: "game", subcat: "rpg", icon: "RO", price: 89900, amounts: [29900, 59900, 89900, 179900] },
+            { id: 16, name: "Nikke", category: "game", subcat: "rpg", icon: "NIK", price: 119900, amounts: [39900, 79900, 119900, 239900] },
+            { id: 17, name: "Mobile Legends", category: "game", subcat: "mo", icon: "ML", price: 79900, amounts: [27900, 54900, 79900, 159900] },
+            { id: 18, name: "Revelation Mobile", category: "game", subcat: "rpg", icon: "REV", price: 69900, amounts: [24900, 49900, 69900, 139900] },
+            { id: 19, name: "PUBG Mobile", category: "game", subcat: "fps", icon: "PUBG", price: 67500, amounts: [27500, 47500, 67500, 135000] },
+            { id: 20, name: "Super Sus", category: "game", subcat: "party", icon: "SUS", price: 34900, amounts: [11900, 23900, 34900, 69900] },
+            { id: 21, name: "Saint Seiya Adventure", category: "game", subcat: "rpg", icon: "SSA", price: 54900, amounts: [18900, 37900, 54900, 109900] },
+            { id: 22, name: "Naruto Mobile", category: "game", subcat: "action", icon: "NAR", price: 64900, amounts: [22900, 45900, 64900, 129900] },
+            // Game dari screenshot 247277
+            { id: 23, name: "Never After", category: "game", subcat: "rpg", icon: "NA", price: 49900, amounts: [16900, 33900, 49900, 99900] },
+            { id: 24, name: "One Punch Man", category: "game", subcat: "action", icon: "OPM", price: 69900, amounts: [24900, 49900, 69900, 139900] },
+            { id: 25, name: "Miker", category: "game", subcat: "casual", icon: "MIK", price: 29900, amounts: [9900, 19900, 29900, 59900] },
+            { id: 26, name: "Super Mario", category: "game", subcat: "platform", icon: "MAR", price: 39900, amounts: [12900, 25900, 39900, 79900] },
+            { id: 27, name: "Marvel Future Fight", category: "game", subcat: "action", icon: "MARV", price: 59900, amounts: [19900, 39900, 59900, 119900] },
+            { id: 28, name: "Football Master", category: "game", subcat: "sport", icon: "FM", price: 44900, amounts: [14900, 29900, 44900, 89900] },
+            { id: 29, name: "Tomorrow Chase", category: "game", subcat: "racing", icon: "TC", price: 39900, amounts: [12900, 25900, 39900, 79900] },
+            { id: 30, name: "LifeAfter", category: "game", subcat: "survival", icon: "LA", price: 54900, amounts: [18900, 37900, 54900, 109900] },
+            { id: 31, name: "Dragon Raja", category: "game", subcat: "rpg", icon: "DR", price: 79900, amounts: [27900, 55900, 79900, 159900] },
+            { id: 32, name: "Chimera Land", category: "game", subcat: "rpg", icon: "CL", price: 49900, amounts: [16900, 33900, 49900, 99900] },
+            // Game dari screenshot 247278
+            { id: 33, name: "League of Legends", category: "game", subcat: "mo", icon: "LoL", price: 99900, amounts: [34900, 69900, 99900, 199900] },
+            { id: 34, name: "Kagaro", category: "game", subcat: "rpg", icon: "KAG", price: 44900, amounts: [14900, 29900, 44900, 89900] },
+            { id: 35, name: "Genshin Impact", category: "game", subcat: "rpg", icon: "GI", price: 139000, amounts: [39000, 89000, 139000, 279000] },
+            { id: 36, name: "Free Fire MAX", category: "game", subcat: "fps", icon: "FFM", price: 114900, amounts: [39900, 79900, 114900, 229900] },
+            { id: 37, name: "Free Fire", category: "game", subcat: "fps", icon: "FF", price: 104900, amounts: [37900, 74900, 104900, 209900] },
+            { id: 38, name: "Luna The Windows", category: "game", subcat: "rpg", icon: "LUNA", price: 39900, amounts: [12900, 25900, 39900, 79900] },
+            // Game dari screenshot 247279
+            { id: 39, name: "State Survival", category: "game", subcat: "survival", icon: "SS", price: 54900, amounts: [18900, 37900, 54900, 109900] },
+            { id: 40, name: "Time Raiders", category: "game", subcat: "action", icon: "TR", price: 49900, amounts: [16900, 33900, 49900, 99900] },
+            { id: 41, name: "Origin Fug", category: "game", subcat: "rpg", icon: "OF", price: 39900, amounts: [12900, 25900, 39900, 79900] },
+            { id: 42, name: "Mirage Spiritual", category: "game", subcat: "rpg", icon: "MS", price: 44900, amounts: [14900, 29900, 44900, 89900] },
+            { id: 43, name: "Conquer Legendary", category: "game", subcat: "rpg", icon: "CL", price: 54900, amounts: [18900, 37900, 54900, 109900] },
+            { id: 44, name: "Café Legends", category: "game", subcat: "simulation", icon: "CL", price: 34900, amounts: [11900, 23900, 34900, 69900] },
+            { id: 45, name: "Lapdace", category: "game", subcat: "racing", icon: "LAP", price: 39900, amounts: [12900, 25900, 39900, 79900] },
+            { id: 46, name: "Heroes Evolved", category: "game", subcat: "mo", icon: "HE", price: 49900, amounts: [16900, 33900, 49900, 99900] },
+            { id: 47, name: "Fundamental Connect", category: "game", subcat: "puzzle", icon: "FC", price: 29900, amounts: [9900, 19900, 29900, 59900] },
+            { id: 48, name: "Blue Agent Mobile 3D", category: "game", subcat: "action", icon: "BA", price: 44900, amounts: [14900, 29900, 44900, 89900] },
+            // Game populer tambahan
+            { id: 49, name: "Honor of Kings", category: "game", subcat: "mo", icon: "HoK", price: 72900, amounts: [25900, 51900, 72900, 145900] },
+            { id: 50, name: "Magic Chess", category: "game", subcat: "strategy", icon: "MC", price: 39900, amounts: [12900, 25900, 39900, 79900] },
+            
+            // ============================================
+            // PULSA & DATA (SEMUA OPERATOR)
+            // ============================================
+            { id: 101, name: "Pulsa Telkomsel 5rb", category: "pulsa", subcat: "telkomsel", icon: "TEL", price: 5500, amounts: [5500] },
+            { id: 102, name: "Pulsa Telkomsel 10rb", category: "pulsa", subcat: "telkomsel", icon: "TEL", price: 10500, amounts: [10500] },
+            { id: 103, name: "Pulsa Telkomsel 20rb", category: "pulsa", subcat: "telkomsel", icon: "TEL", price: 20500, amounts: [20500] },
+            { id: 104, name: "Pulsa Telkomsel 50rb", category: "pulsa", subcat: "telkomsel", icon: "TEL", price: 50500, amounts: [50500] },
+            { id: 105, name: "Pulsa Telkomsel 100rb", category: "pulsa", subcat: "telkomsel", icon: "TEL", price: 100500, amounts: [100500] },
+            { id: 106, name: "Pulsa XL 5rb", category: "pulsa", subcat: "xl", icon: "XL", price: 5500, amounts: [5500] },
+            { id: 107, name: "Pulsa XL 10rb", category: "pulsa", subcat: "xl", icon: "XL", price: 10500, amounts: [10500] },
+            { id: 108, name: "Pulsa XL 20rb", category: "pulsa", subcat: "xl", icon: "XL", price: 20500, amounts: [20500] },
+            { id: 109, name: "Pulsa XL 50rb", category: "pulsa", subcat: "xl", icon: "XL", price: 50500, amounts: [50500] },
+            { id: 110, name: "Pulsa XL 100rb", category: "pulsa", subcat: "xl", icon: "XL", price: 100500, amounts: [100500] },
+            { id: 111, name: "Pulsa Indosat 5rb", category: "pulsa", subcat: "indosat", icon: "INO", price: 5500, amounts: [5500] },
+            { id: 112, name: "Pulsa Indosat 10rb", category: "pulsa", subcat: "indosat", icon: "INO", price: 10500, amounts: [10500] },
+            { id: 113, name: "Pulsa Indosat 20rb", category: "pulsa", subcat: "indosat", icon: "INO", price: 20500, amounts: [20500] },
+            { id: 114, name: "Pulsa Indosat 50rb", category: "pulsa", subcat: "indosat", icon: "INO", price: 50500, amounts: [50500] },
+            { id: 115, name: "Pulsa Indosat 100rb", category: "pulsa", subcat: "indosat", icon: "INO", price: 100500, amounts: [100500] },
+            { id: 116, name: "Pulsa Tri 5rb", category: "pulsa", subcat: "tri", icon: "TRI", price: 5500, amounts: [5500] },
+            { id: 117, name: "Pulsa Tri 10rb", category: "pulsa", subcat: "tri", icon: "TRI", price: 10500, amounts: [10500] },
+            { id: 118, name: "Pulsa Tri 20rb", category: "pulsa", subcat: "tri", icon: "TRI", price: 20500, amounts: [20500] },
+            { id: 119, name: "Pulsa Tri 50rb", category: "pulsa", subcat: "tri", icon: "TRI", price: 50500, amounts: [50500] },
+            { id: 120, name: "Paket Data Telkomsel 2GB", category: "pulsa", subcat: "data", icon: "DATA", price: 25000, amounts: [25000] },
+            { id: 121, name: "Paket Data Telkomsel 5GB", category: "pulsa", subcat: "data", icon: "DATA", price: 55000, amounts: [55000] },
+            { id: 122, name: "Paket Data Telkomsel 10GB", category: "pulsa", subcat: "data", icon: "DATA", price: 95000, amounts: [95000] },
+            { id: 123, name: "Paket Data XL 2GB", category: "pulsa", subcat: "data", icon: "DATA", price: 23000, amounts: [23000] },
+            { id: 124, name: "Paket Data XL 5GB", category: "pulsa", subcat: "data", icon: "DATA", price: 52000, amounts: [52000] },
+            { id: 125, name: "Paket Data Indosat 2GB", category: "pulsa", subcat: "data", icon: "DATA", price: 24000, amounts: [24000] },
+            
+            // Voucher
+            { id: 201, name: "Voucher Google Play 20rb", category: "voucher", subcat: "google", icon: "GP", price: 21000, amounts: [21000] },
+            { id: 202, name: "Voucher Google Play 50rb", category: "voucher", subcat: "google", icon: "GP", price: 51000, amounts: [51000] },
+            { id: 203, name: "Voucher Google Play 100rb", category: "voucher", subcat: "google", icon: "GP", price: 101000, amounts: [101000] },
+            { id: 204, name: "Voucher iTunes 50rb", category: "voucher", subcat: "itunes", icon: "IT", price: 52000, amounts: [52000] },
+            { id: 205, name: "Voucher iTunes 100rb", category: "voucher", subcat: "itunes", icon: "IT", price: 102000, amounts: [102000] },
+            { id: 206, name: "Voucher Netflix 1 Bulan", category: "voucher", subcat: "netflix", icon: "NF", price: 55000, amounts: [55000] },
+            { id: 207, name: "Voucher Spotify Premium 1 Bulan", category: "voucher", subcat: "spotify", icon: "SP", price: 55000, amounts: [55000] }
+        ];
+
+        // Data transaksi (kosong, hanya akan terisi saat checkout)
+        let transactions = [];
+        let cart = [];
+        let currentItem = null;
+        let selectedAmount = null;
+        let nextInvoiceNumber = 1;
+
+        function generateInvoice() {
+            const date = new Date();
+            const invNum = String(nextInvoiceNumber++).padStart(8, '0');
+            return `WS${date.getFullYear()}${String(date.getMonth()+1).padStart(2,'0')}${invNum}`;
+        }
+
+        function renderGames(filter = "all", search = "") {
+            let filtered = gamesData;
+            if (filter !== "all") filtered = filtered.filter(g => g.category === filter);
+            if (search) filtered = filtered.filter(g => g.name.toLowerCase().includes(search.toLowerCase()));
+            
+            const grid = document.getElementById("gamesGrid");
+            grid.innerHTML = filtered.map(item => `
+                <div class="game-card ${item.id === 17 ? 'featured' : ''}" data-id="${item.id}">
+                    ${item.id === 17 ? '<div class="hot-badge">HOT</div>' : ''}
+                    <div class="game-icon"><img src="https://placehold.co/80x80/1a1a2e/7c3aed?text=${item.icon}" alt="${item.name}"></div>
+                    <h4>${item.name}</h4>
+                    <span class="game-category">${item.category === 'game' ? '🎮 Game' : item.category === 'pulsa' ? '📱 Pulsa/Data' : '🎫 Voucher'}</span>
+                    <button class="btn-topup" data-id="${item.id}">Beli</button>
+                </div>
+            `).join("");
+            
+            document.querySelectorAll(".btn-topup").forEach(btn => {
+                btn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    const id = parseInt(btn.dataset.id);
+                    currentItem = gamesData.find(g => g.id === id);
+                    openModal();
+                });
+            });
+        }
+
+        function openModal() {
+            if (!currentItem) return;
+            document.getElementById("modalGameTitle").innerText = `Beli ${currentItem.name}`;
+            const amountDiv = document.getElementById("amountOptions");
+            amountDiv.innerHTML = currentItem.amounts.map(amt => 
+                `<button class="amount-btn" data-amount="${amt}">Rp ${amt.toLocaleString()}</button>`
+            ).join("");
+            document.querySelectorAll(".amount-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    document.querySelectorAll(".amount-btn").forEach(b => b.classList.remove("selected"));
+                    btn.classList.add("selected");
+                    selectedAmount = parseInt(btn.dataset.amount);
+                });
+            });
+            document.getElementById("topupModal").classList.add("open");
+        }
+
+        function addToCart() {
+            const targetId = document.getElementById("userId").value;
+            if (!targetId) { alert("Masukkan ID/No.HP tujuan!"); return; }
+            if (!selectedAmount) { alert("Pilih nominal terlebih dahulu!"); return; }
+            cart.push({ 
+                item: currentItem, 
+                amount: selectedAmount, 
+                targetId: targetId,
+                timestamp: new Date()
+            });
+            updateCart();
+            document.getElementById("topupModal").classList.remove("open");
+            document.getElementById("userId").value = "";
+            selectedAmount = null;
+            alert("✓ Berhasil ditambahkan ke keranjang!");
+        }
+
+        function updateCart() {
+            const cartItemsDiv = document.getElementById("cartItems");
+            const cartCountSpan = document.getElementById("cartCount");
+            const cartTotalSpan = document.getElementById("cartTotal");
+            
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = "<p style='text-align:center; color:gray;'>Keranjang kosong</p>";
+                cartTotalSpan.innerText = "Total: Rp 0";
+                cartCountSpan.innerText = "0";
+                return;
+            }
+            
+            let total = 0;
+            cartItemsDiv.innerHTML = cart.map((item, idx) => {
+                total += item.amount;
+                return `<div class="cart-item">
+                    <div><strong>${item.item.name}</strong><br><small>${item.targetId}</small><br>Rp ${item.amount.toLocaleString()}</div>
+                    <button class="remove-cart" data-idx="${idx}" style="background:#ef4444; border:none; color:white; padding:5px 10px; border-radius:20px; cursor:pointer;">Hapus</button>
+                </div>`;
+            }).join("");
+            
+            cartTotalSpan.innerText = `Total: Rp ${total.toLocaleString()}`;
+            cartCountSpan.innerText = cart.length;
+            
+            document.querySelectorAll(".remove-cart").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const idx = parseInt(btn.dataset.idx);
+                    cart.splice(idx, 1);
+                    updateCart();
+                });
+            });
+        }
+
+        function checkout() {
+            if (cart.length === 0) { alert("Keranjang masih kosong!"); return; }
+            
+            const now = new Date();
+            const dateStr = now.toLocaleString('id-ID');
+            
+            for (let item of cart) {
+                const invoice = generateInvoice();
+                transactions.unshift({
+                    date: dateStr,
+                    invoice: invoice,
+                    product: item.item.name,
+                    targetId: item.targetId,
+                    price: `IDR ${item.amount.toLocaleString()}`,
+                    priceNum: item.amount,
+                    status: "success",
+                    username: "User" + Math.floor(Math.random() * 1000)
+                });
+            }
+            
+            cart = [];
+            updateCart();
+            renderTransactions();
+            renderLeaderboard();
+            document.getElementById("cartSidebar").classList.remove("open");
+            alert(`✅ Checkout berhasil! ${transactions.length} transaksi baru telah tercatat. Terima kasih!`);
+            
+            // Scroll ke transaksi
+            document.getElementById("transactions").scrollIntoView({ behavior: "smooth" });
+        }
+
+        function renderTransactions() {
+            const tbody = document.getElementById("transactionsBody");
+            const emptyMsg = document.getElementById("emptyTransactionMsg");
+            
+            if (transactions.length === 0) {
+                tbody.innerHTML = "";
+                emptyMsg.style.display = "block";
+                return;
+            }
+            
+            emptyMsg.style.display = "none";
+            tbody.innerHTML = transactions.map(t => `
+                <tr>
+                    <td>${t.date}</td>
+                    <td>${t.invoice}</td>
+                    <td>${t.product}</td>
+                    <td>${t.targetId}</td>
+                    <td>${t.price}</td>
+                    <td><span class="status success">SUCCESS</span></td>
+                </tr>
+            `).join("");
+        }
+
+        function renderLeaderboard() {
+            const tbody = document.getElementById("leaderboardBody");
+            const emptyMsg = document.getElementById("emptyLeaderboardMsg");
+            
+            // Group by username
+            const userMap = new Map();
+            transactions.forEach(t => {
+                if (userMap.has(t.username)) {
+                    const existing = userMap.get(t.username);
+                    existing.count++;
+                    existing.total += t.priceNum;
+                } else {
+                    userMap.set(t.username, { username: t.username, count: 1, total: t.priceNum });
+                }
+            });
+            
+            const leaderboard = Array.from(userMap.values()).sort((a,b) => b.total - a.total).slice(0, 10);
+            
+            if (leaderboard.length === 0) {
+                tbody.innerHTML = "";
+                emptyMsg.style.display = "block";
+                return;
+            }
+            
+            emptyMsg.style.display = "none";
+            tbody.innerHTML = leaderboard.map((user, idx) => `
+                <tr>
+                    <td>${idx + 1}</td>
+                    <td>${user.username}</td>
+                    <td>${user.count}x</td>
+                    <td>IDR ${user.total.toLocaleString()}</td>
+                </tr>
+            `).join("");
+        }
+
+        function searchInvoice() {
+            const invoiceNum = document.getElementById("invoiceInput").value;
+            if (!invoiceNum) { alert("Masukkan nomor invoice!"); return; }
+            
+            const found = transactions.find(t => t.invoice === invoiceNum);
+            const resultDiv = document.getElementById("invoiceResult");
+            resultDiv.style.display = "block";
+            
+            if (found) {
+                resultDiv.innerHTML = `<div style="background:rgba(16,185,129,0.2); padding:15px; border-radius:12px; border-left: 4px solid #10b981;">
+                    <strong>✅ Invoice Ditemukan!</strong><br>
+                    Produk: ${found.product}<br>
+                    Tujuan: ${found.targetId}<br>
+                    Harga: ${found.price}<br>
+                    Tanggal: ${found.date}<br>
+                    Status: <span class="status success">SUCCESS</span>
+                </div>`;
+            } else {
+                resultDiv.innerHTML = `<div style="background:rgba(239,68,68,0.2); padding:15px; border-radius:12px; border-left: 4px solid #ef4444;">
+                    <strong>❌ Invoice Tidak Ditemukan</strong><br>
+                    Pastikan nomor invoice yang Anda masukkan benar.<br>
+                    Invoice akan muncul setelah melakukan checkout.
+                </div>`;
+            }
+        }
+
+        // Event Listeners
+        document.addEventListener("DOMContentLoaded", () => {
+            renderGames();
+            renderTransactions();
+            renderLeaderboard();
+            
+            // Filter
+            document.querySelectorAll(".filter-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+                    const activeCat = document.querySelector(".cat-btn.active").dataset.cat;
+                    let filter = btn.dataset.filter;
+                    if (activeCat !== "all") filter = activeCat;
+                    renderGames(filter, document.getElementById("searchGame").value);
+                });
+            });
+            
+            document.getElementById("searchBtn").addEventListener("click", () => {
+                const activeFilter = document.querySelector(".filter-btn.active").dataset.filter;
+                renderGames(activeFilter, document.getElementById("searchGame").value);
+            });
+            
+            document.getElementById("searchGame").addEventListener("keyup", (e) => {
+                if (e.key === "Enter") {
+                    const activeFilter = document.querySelector(".filter-btn.active").dataset.filter;
+                    renderGames(activeFilter, e.target.value);
+                }
+            });
+            
+            // Category Tabs
+            document.querySelectorAll(".cat-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+                    renderGames(btn.dataset.cat, document.getElementById("searchGame").value);
+                });
+            });
+            
+            // Popular Tags
+            document.querySelectorAll(".tag").forEach(tag => {
+                tag.addEventListener("click", () => {
+                    const gameName = tag.dataset.game;
+                    document.getElementById("searchGame").value = gameName;
+                    const activeFilter = document.querySelector(".filter-btn.active").dataset.filter;
+                    renderGames(activeFilter, gameName);
+                });
+            });
+            
+            // Cart
+            document.getElementById("cartIcon").addEventListener("click", () => {
+                document.getElementById("cartSidebar").classList.add("open");
+            });
+            document.getElementById("closeCartBtn").addEventListener("click", () => {
+                document.getElementById("cartSidebar").classList.remove("open");
+            });
+            document.getElementById("addToCartBtn").addEventListener("click", addToCart);
+            document.getElementById("checkoutBtn").addEventListener("click", checkout);
+            
+            // Modal
+            document.getElementById("closeModalBtn").addEventListener("click", () => {
+                document.getElementById("topupModal").classList.remove("open");
+            });
+            document.getElementById("closeLoginModal").addEventListener("click", () => {
+                document.getElementById("loginModal").classList.remove("open");
+            });
+            document.getElementById("closeRegisterModal").addEventListener("click", () => {
+                document.getElementById("registerModal").classList.remove("open");
+            });
+            document.getElementById("loginBtnNav").addEventListener("click", (e) => {
+                e.preventDefault();
+                document.getElementById("loginModal").classList.add("open");
+            });
+            document.getElementById("registerBtnNav").addEventListener("click", (e) => {
+                e.preventDefault();
+                document.getElementById("registerModal").classList.add("open");
+            });
+            document.getElementById("switchToRegister").addEventListener("click", (e) => {
+                e.preventDefault();
+                document.getElementById("loginModal").classList.remove("open");
+                document.getElementById("registerModal").classList.add("open");
+            });
+            document.getElementById("switchToLogin").addEventListener("click", (e) => {
+                e.preventDefault();
+                document.getElementById("registerModal").classList.remove("open");
+                document.getElementById("loginModal").classList.add("open");
+            });
+            
+            // Invoice Search
+            document.getElementById("searchInvoiceBtn").addEventListener("click", searchInvoice);
+            
+            // Theme Toggle
+            let isDark = true;
+            document.getElementById("themeToggle").addEventListener("click", () => {
+                isDark = !isDark;
+                if (isDark) document.body.classList.remove("light");
+                else document.body.classList.add("light");
+            });
+            
+            // Mobile Menu
+            const menuBtn = document.getElementById("mobileMenuBtn");
+            const navbar = document.getElementById("navbar");
+            menuBtn.addEventListener("click", () => navbar.classList.toggle("active"));
+            
+            document.querySelectorAll(".nav-link").forEach(link => {
+                link.addEventListener("click", function(e) {
+                    if (this.getAttribute("href") !== "#" && this.getAttribute("href") !== "") {
+                        const targetId = this.getAttribute("href");
+                        if (targetId !== "#" && targetId !== "") {
+                            const target = document.querySelector(targetId);
+                            if (target) {
+                                e.preventDefault();
+                                target.scrollIntoView({ behavior: "smooth" });
+                            }
+                        }
+                    }
+                    navbar.classList.remove("active");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
